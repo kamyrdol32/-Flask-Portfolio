@@ -1,0 +1,141 @@
+/* Colors */
+* {
+  --primary: #ECB72D;
+  --secondary: rgba(12, 12, 12, 0.66);
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+         -moz-user-select: none; /* Old versions of Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
+}
+
+a, a:visited, a:active, a:link {
+  color: white;
+  text-decoration: none;
+ }
+.navbar {
+    font-weight: bold;
+}
+.navbar a:hover {
+    color: var(--primary) !important;
+}
+
+/* Navbar */
+.navbarScroll.navbarDark {
+    background-color: black;
+    color: var(--primary) !important;
+    border-bottom: 2px solid var(--primary);
+}
+
+/* Home */
+.bg_image {
+    height:100vh;
+    background: url(/static/Images/bg.jpg);
+    background-size:cover;
+    position:relative;
+}
+
+@font-face {
+    font-family: Bungee;
+    src: url('/static/Fonts/BebasNeue-Regular.ttf'); }
+
+.home_title {
+    font-size: 5rem;
+    font-weight: bolder;
+}
+.home_desc {
+    font-size: 1.5rem;
+}
+.home-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+
+/* About */
+.imageAboutPage {
+    width: 100%;
+    border: 2px solid black;
+}
+.about-title {
+    font-size: large;
+}
+
+
+/* Services */
+.services-text.card {
+    height: 320px;
+    cursor: pointer;
+  }
+.services-icon {
+    font-size: 36px;
+    text-align: center;
+    width: 100%;
+}
+.card-title {
+    text-align: center;
+}
+.card:hover .services-icon {
+    color: var(--primary);
+}
+.card:hover .services-icon-stars {
+    color: var(--primary);
+}
+.services-card:hover {
+    border: 1px solid var(--primary);
+}
+
+/* Portfolio */
+.btn-card {
+    background-color: var(--primary);
+    color: black !important;
+    font-weight: bold;
+}
+.portfolio-card:hover {
+    border: 1px solid var(--primary);
+}
+
+/* Contact */
+#gmapdisplay {
+    border: 2px solid var(--primary);
+}
+
+#gmapdisplay img.text-marker{
+    max-width:none!important;
+    background:none!important;
+}
+img{
+    max-width:none
+}
+.btn-contact {
+    background-color: var(--primary);
+    color: black !important;
+    font-weight: bold;
+}
+
+/* Footer */
+.social-icons {
+    font-size: 36px;
+    cursor: pointer;
+}
+.icon {
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.fa-facebook:hover,.fa-instagram:hover,.fa-twitter:hover,.fa-linkedin:hover, .fa-twitch:hover {
+    color: var(--primary);
+}
+.fab {
+    color: #000000;
+}
+/* footer styling */
+#footer {
+    background-color: #808080;
+    text-align: center;
+    padding-left: 50px;
+}
