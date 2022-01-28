@@ -112,124 +112,25 @@
         <div class="container mt-3 pt-5 pb-5">
             <h1 class="text-center animate__fadeIn">Technologie</h1>
             <div class="row" data-aos="fade-up">
-                <div class="col-lg-4 mt-4">
-                    <div class="card services-card">
-                        <div class="card-body">
-                            <i class="fab services-icon fa-python"></i>
-                            <h4 class="card-title mt-3">Python</h4>
-                            <div class="pt-2 pb-2 card-text text-center services-icon-stars">
-                                <i class='fas fa-star'></i>
-                                <i class='fas fa-star'></i>
-                                <i class='fas fa-star'></i>
-                                <i class='fas fa-star'></i>
-                                <i class='far fa-star'></i>
+                {% for Data in Technologie %}
+                    <div class="col-lg-4 mt-4">
+                        <div class="card services-card">
+                            <div class="card-body">
+                                <i class="services-icon {{ Data[1] }}"></i>
+                                <h4 class="card-title mt-3">{{ Data[0] }}</h4>
+                                <div class="pt-2 pb-2 card-text text-center services-icon-stars">
+                                    {% for n in range(0,Data[2]) %}
+                                        <i class='fas fa-star'></i>
+                                    {% endfor %}
+                                    {% for n in range(0,Data[3]) %}
+                                        <i class='far fa-star'></i>
+                                    {% endfor %}
+                                </div>
+                                <p class="card-text mt-3">{{Data[4]}}</p>
                             </div>
-                            <p class="card-text mt-3">
-                                Język programowania wysokiego poziomu ogólnego przeznaczenia, o rozbudowanym pakiecie bibliotek standardowych, którego ideą przewodnią jest czytelność i klarowność kodu źródłowego.
-                                Jego składnia cechuje się czytelnością, przejrzystością i zwięzłością.
-                            </p>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-4 mt-4">
-                    <div class="card services-card">
-                        <div class="card-body">
-                            <i class='fas services-icon fa-pepper-hot'></i>
-                            <h4 class="card-title mt-3">Flask</h4>
-                            <div class="pt-2 pb-2 card-text text-center services-icon-stars">
-                                <i class='fas fa-star'></i>
-                                <i class='fas fa-star'></i>
-                                <i class='fas fa-star'></i>
-                                <i class='far fa-star'></i>
-                                <i class='far fa-star'></i>
-                            </div>
-                            <p class="card-text mt-3">
-                                Mikro framework aplikacji webowych napisany w języku Python.
-                                Jest sklasyfikowany jako micro-framework, ponieważ nie wymaga określonych narzędzi ani bibliotek.
-                                Jest to jeden z popularniejszych framework'ow wykorzystywanych do tworzenia stron internetowych.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 mt-4">
-                    <div class="card services-card">
-                        <div class="card-body">
-                            <i class='fas services-icon fa-keyboard'></i>
-                            <h4 class="card-title mt-3">Django</h4>
-                            <div class="pt-2 pb-2 card-text text-center services-icon-stars">
-                                <i class='fas fa-star'></i>
-                                <i class='far fa-star'></i>
-                                <i class='far fa-star'></i>
-                                <i class='far fa-star'></i>
-                                <i class='far fa-star'></i>
-                            </div>
-                            <p class="card-text mt-3">
-                                Wolny i otwarty framework przeznaczony do tworzenia aplikacji internetowych, napisany w Pythonie.
-                                Powstał pod koniec 2003 roku jako ewolucyjne rozwinięcie aplikacji internetowych, tworzonych przez grupę programistów związanych z Lawrence Journal-World.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row" data-aos="fade-up">
-                <div class="col-lg-4 mt-4">
-                    <div class="card services-card">
-                        <div class="card-body">
-                            <i class="fas services-icon fa-database"></i>
-                            <h4 class="card-title mt-3">SQL / MySQL</h4>
-                            <div class="pt-2 pb-2 card-text text-center services-icon-stars">
-                                <i class='fas fa-star'></i>
-                                <i class='fas fa-star'></i>
-                                <i class='fas fa-star'></i>
-                                <i class='far fa-star'></i>
-                                <i class='far fa-star'></i>
-                            </div>
-                            <p class="card-text mt-3">
-                                Jest to język dziedzinowy używany do tworzenia, modyfikowania relacyjnych baz danych oraz do umieszczania i pobierania danych z tych baz.
-                                Decyzję o sposobie przechowywania i pobrania danych pozostawia się systemowi zarządzania bazą danych.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 mt-4">
-                    <div class="card services-card">
-                        <div class="card-body">
-                            <i class='fab services-icon fa-git-alt'></i>
-                            <h4 class="card-title mt-3">Git</h4>
-                            <div class="pt-2 pb-2 card-text text-center services-icon-stars">
-                                <i class='fas fa-star'></i>
-                                <i class='fas fa-star'></i>
-                                <i class='far fa-star'></i>
-                                <i class='far fa-star'></i>
-                                <i class='far fa-star'></i>
-                            </div>
-                            <p class="card-text mt-3">
-                                Rozproszonym systemem kontroli wersji ułatwiającym pracę nad tworzeniem aplikacji, stron internetowych i innych narzędzi w grupach.
-                                System śledzi wszystkie wykonywane zmiany w plikach, a także umożliwia przywrócenie ich dowolnej, wcześniejszej wersji
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 mt-4">
-                    <div class="card services-card">
-                        <div class="card-body">
-                            <i class='fab services-icon fa-linux'></i>
-                            <h4 class="card-title mt-3">Linux</h4>
-                            <div class="pt-2 pb-2 card-text text-center services-icon-stars">
-                                <i class='fas fa-star'></i>
-                                <i class='fas fa-star'></i>
-                                <i class='fas fa-star'></i>
-                                <i class='far fa-star'></i>
-                                <i class='far fa-star'></i>
-                            </div>
-                            <p class="card-text mt-3">
-                                Rodzina uniksopodobnych systemów operacyjnych opartych na jądrze Linux.
-                                Linux jest jednym z przykładów wolnego i otwartego oprogramowania.
-                                Jego kod źródłowy może być dowolnie wykorzystywany, modyfikowany i rozpowszechniany.
-                            </p>
-                        </div>
-                    </div>
-                </div>
+                {% endfor %}
             </div>
         </div>
     </section>
