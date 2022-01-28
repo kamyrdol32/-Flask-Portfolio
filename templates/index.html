@@ -93,12 +93,12 @@
                     </div>
                     <div class="row mt-5">
                         <p class="about-title">
-                            <b>Cześć!</b> <br>Nazywam sie <b>Kamil Żegleń</b> i od kilku lat uczę sie programowania.
+                            <b>Cześć!</b> <br>Nazywam sie <b>Kamil Żegleń</b> i od kilku lat zajmuję sie programowania.
                         </p>
                         <hr class="solid">
                         <p class="about-text">
                             Aktualnie jestem studentem na "<b>Uniwersytecie Pedagogicznym im. Komisji Edukacji Narodowej w Krakowie</b>", gdzie studiuję "<b>Edukacje Techniczno-Informatyczną</b>" na poziomie magisterskim. <br><br>
-                            Swoją karierę z <b>Python'em</b> rozpocząłem około 2-lata temu, moim dotychczasowym największym osiągnięciem jest napisanie "<b>Aplikacji do zarządzania kadrami</b>" która powstała na potrzeby pracy inżynierskiej na studiach gdzie został wykorzystany język "<b>Python</b>" oraz frameword "<b>Flask</b>".
+                            Swoją karierę z <b>Python'em</b> rozpocząłem około 2-lata temu, moim dotychczasowym osiągnięciem jest napisanie "<b>Aplikacji do zarządzania kadrami</b>" która powstała na potrzeby pracy inżynierskiej na studiach gdzie został wykorzystany język "<b>Python</b>" oraz framework "<b>Flask</b>".
                         </p>
                     </div>
                 </div>
@@ -111,9 +111,9 @@
     <section id="services">
         <div class="container mt-3 pt-5 pb-5">
             <h1 class="text-center animate__fadeIn">Technologie</h1>
-            <div class="row" data-aos="fade-up">
+            <div class="row">
                 {% for Data in Technologie %}
-                    <div class="col-lg-4 mt-4">
+                    <div class="col-lg-4 mt-4" data-aos="fade-up">
                         <div class="card services-card">
                             <div class="card-body">
                                 <i class="services-icon {{ Data[1] }}"></i>
@@ -140,46 +140,22 @@
     <section id="portfolio">
         <div class="container mt-3 pt-5 pb-5">
             <h1 class="text-center">Portfolio</h1>
-            <div class="row" data-aos="zoom-in">
-                <div class="col-lg-4 mt-4">
-                    <div class="card portfolio-card">
-                        <img class="card-img-top" src="/static/Images/400x400.png" alt="Card image" style="width: 100%">
-                        <div class="card-body">
-                            <h4 class="card-title">Aplikacja do zarządzania kadrami</h4>
-                            <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                            <div class="text-center">
-                                <a href="#" class="btn btn-card m-2">Demo</a>
-                                <a href="#" class="btn btn-card m-2">Download</a>
+            <div class="row">
+                {% for Data in Portfolio %}
+                    <div class="col-lg-4 mt-4" data-aos="zoom-in">
+                        <div class="card portfolio-card">
+                            <img class="card-img-top" src="{{ Data[1] }}" alt="Card image" style="width: 100%">
+                            <div class="card-body">
+                                <h4 class="card-title">{{ Data[0] }}</h4>
+                                <p class="card-text">{{  Data[2] }}</p>
+                                <div class="text-center">
+                                    <a href="{{ Data[3] }}" class="btn btn-card m-2">Demo</a>
+                                    <a href="{{ Data[4] }}" class="btn btn-card m-2">Download</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-4 mt-4">
-                    <div class="card portfolio-card">
-                        <img class="card-img-top" src="/static/Images/400x400.png" alt="Card image" style="width: 100%">
-                        <div class="card-body">
-                            <h4 class="card-title">Aplikacja do zarządzania kadrami</h4>
-                            <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                            <div class="text-center">
-                                <a href="#" class="btn btn-card m-2">Demo</a>
-                                <a href="#" class="btn btn-card m-2">Download</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 mt-4">
-                    <div class="card portfolio-card">
-                        <img class="card-img-top" src="/static/Images/400x400.png" alt="Card image" style="width: 100%">
-                        <div class="card-body">
-                            <h4 class="card-title">Aplikacja do zarządzania kadrami</h4>
-                            <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                            <div class="text-center">
-                                <a href="#" class="btn btn-card m-2">Demo</a>
-                                <a href="#" class="btn btn-card m-2">Download</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                {% endfor %}
             </div>
         </div>
     </section>
@@ -199,15 +175,17 @@
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <form>
-                        <input type="text" class="form-control" placeholder="Imie i Nazwisko">
-                        <input type="email" class="form-control mt-3" placeholder="E-mail">
-                        <input type="text" class="form-control mt-3" placeholder="Temat">
+                    {% from "_formhelpers.html" import render_field %}
+                    <form method="post">
+                        {{ form.csrf_token }}
+                        {{ render_field(form.name, class="form-control mt-3") }}
+                        {{ render_field(form.email, class="form-control mt-3") }}
+                        {{ render_field(form.topic, class="form-control mt-3") }}
                         <div class="mb-3 mt-3">
-                            <textarea class="form-control" rows="5" id="comment" name="text" placeholder="Treść"></textarea>
+                            {{ render_field(form.text, rows="5", class="form-control") }}
                         </div>
+                        <input type="submit" value="Go">
                     </form>
-                    <button type="button" class="btn btn-contact mt-3">Wyślij</button>
                 </div>
             </div>
         </div>

@@ -1,4 +1,8 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request, redirect
+
+
+from forms import MailForm
+
 
 ####################
 ### CONFIG & DECORATOS
@@ -19,11 +23,18 @@ Technologie = [
     ["Linux", "fab fa-linux", 3, 2, "Rodzina uniksopodobnych systemów operacyjnych opartych na jądrze Linux. Linux jest jednym z przykładów wolnego i otwartego oprogramowania. Jego kod źródłowy może być dowolnie wykorzystywany, modyfikowany i rozpowszechniany."]
 ]
 
-@app.route('/')
+Portfolio = [
+    ["Lorem ipsum", "/static/Images/400x400.png", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nulla arcu, maximus sed erat a, lacinia aliquet justo. Ut in fringilla elit. Nunc vestibulum, quam at aliquam elementum, metus elit dignissim nibh, vel congue leo urna in urna", "http://kamilzeglen.pl", "https://github.com/kamyrdol32"],
+    ["Lorem ipsum", "/static/Images/400x400.png", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nulla arcu, maximus sed erat a, lacinia aliquet justo. Ut in fringilla elit. Nunc vestibulum, quam at aliquam elementum, metus elit dignissim nibh, vel congue leo urna in urna", "http://kamilzeglen.pl", "https://github.com/kamyrdol32"],
+    ["Lorem ipsum", "/static/Images/400x400.png", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nulla arcu, maximus sed erat a, lacinia aliquet justo. Ut in fringilla elit. Nunc vestibulum, quam at aliquam elementum, metus elit dignissim nibh, vel congue leo urna in urna", "http://kamilzeglen.pl", "https://github.com/kamyrdol32"],
+]
+
+@app.route('/', methods=['GET', 'POST'])
 def index():
-    return render_template("index.html", Technologie=Technologie)
-
-
+    form = MailForm()
+    if form.validate_on_submit():
+        return redirect('/success')
+    return render_template("index.html", Technologie=Technologie, Portfolio=Portfolio, form=form)
 
 
 ####################
