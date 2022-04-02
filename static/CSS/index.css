@@ -14,14 +14,18 @@ a, a:visited, a:active, a:link {
   color: white;
   text-decoration: none;
  }
+label {
+    display: None;
+}
+
+
+/* Navbar */
 .navbar {
     font-weight: bold;
 }
 .navbar a:hover {
     color: var(--primary) !important;
 }
-
-/* Navbar */
 .navbarScroll.navbarDark {
     background-color: black;
     color: var(--primary) !important;

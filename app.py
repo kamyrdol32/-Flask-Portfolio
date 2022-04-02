@@ -1,6 +1,5 @@
 from flask import Flask, render_template, request, redirect
-
-
+from flask_mail import Message, Mail
 from forms import MailForm
 
 
@@ -13,6 +12,7 @@ Type = "Development" # Production or Development
 # Pobieranie config'a z pliku config.py
 app = Flask(__name__)
 app.config.from_object("settings." + Type + "Config")
+mail = Mail(app)
 
 Technologie = [
     ["Python", "fab fa-git-alt", 4, 1, "Język programowania wysokiego poziomu ogólnego przeznaczenia, o rozbudowanym pakiecie bibliotek standardowych, którego ideą przewodnią jest czytelność i klarowność kodu źródłowego. Jego składnia cechuje się czytelnością, przejrzystością i zwięzłością."],
@@ -24,7 +24,7 @@ Technologie = [
 ]
 
 Portfolio = [
-    ["Lorem ipsum", "/static/Images/400x400.png", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nulla arcu, maximus sed erat a, lacinia aliquet justo. Ut in fringilla elit. Nunc vestibulum, quam at aliquam elementum, metus elit dignissim nibh, vel congue leo urna in urna", "http://kamilzeglen.pl", "https://github.com/kamyrdol32"],
+    ["Aplikacja do zarządzania kadrami", "/static/Images/Projects/1.png", "Jest to aplikacja stworzona w Pythonie (Flask) na potrzeby napisania pracy inżynierskiej.", "http://inzynierka.kamilzeglen.pl", "https://github.com/kamyrdol32"],
     ["Lorem ipsum", "/static/Images/400x400.png", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nulla arcu, maximus sed erat a, lacinia aliquet justo. Ut in fringilla elit. Nunc vestibulum, quam at aliquam elementum, metus elit dignissim nibh, vel congue leo urna in urna", "http://kamilzeglen.pl", "https://github.com/kamyrdol32"],
     ["Lorem ipsum", "/static/Images/400x400.png", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nulla arcu, maximus sed erat a, lacinia aliquet justo. Ut in fringilla elit. Nunc vestibulum, quam at aliquam elementum, metus elit dignissim nibh, vel congue leo urna in urna", "http://kamilzeglen.pl", "https://github.com/kamyrdol32"],
 ]
@@ -33,8 +33,20 @@ Portfolio = [
 def index():
     form = MailForm()
     if form.validate_on_submit():
-        return redirect('/success')
+        send_mail(str(form.name.data), str(form.email.data), str(form.topic.data), str(form.text.data))
+
     return render_template("index.html", Technologie=Technologie, Portfolio=Portfolio, form=form)
+
+
+####################
+### Mail
+####################
+
+def send_mail(name, email, topic, text):
+    msg = Message(name + " - " + topic, sender=email, recipients=["kam.zeglen@gmail.com"])
+    msg.html = "Wiadomość od: <b>"+ name + "</b><br><br>" + text + "<br><br>###<br>Adres kontaktowy: " + email + "<br>###"
+    mail.send(msg)
+
 
 
 ####################
