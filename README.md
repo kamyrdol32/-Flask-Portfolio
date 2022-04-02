@@ -2,7 +2,7 @@
 
 | Autorzy | Backend | Frontend |
 | :---: | :---: | :---: |
-| **Kamil Żegleń** ([kamyrdol32](https://github.com/kamyrdol32))  | ![100%](https://progress-bar.dev/90)  | ![0%](https://progress-bar.dev/0)  |
+| **Kamil Żegleń** ([kamyrdol32](https://github.com/kamyrdol32))  | ![100%](https://progress-bar.dev/100)  | ![100%](https://progress-bar.dev/100)  |
 
 # Portfolio
 
