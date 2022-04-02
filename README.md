@@ -16,4 +16,4 @@
   - **CSS**:
     - Bootstrap,
 
-# Zdjęcia
+# DEMO: www.kamilzeglen.pl
