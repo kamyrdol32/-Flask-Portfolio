@@ -1,6 +1,6 @@
-from flask import Flask, render_template, request, redirect
+from flask import Flask, render_template
 from flask_mail import Message, Mail
-from forms import MailForm
+from backend.forms import MailForm
 
 
 ####################

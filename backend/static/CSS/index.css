@@ -35,14 +35,14 @@ label {
 /* Home */
 .bg_image {
     height:100vh;
-    background: url(/static/Images/bg.jpg);
+    background: url(/backend/static/Images/bg.jpg);
     background-size:cover;
     position:relative;
 }
 
 @font-face {
     font-family: Bungee;
-    src: url('/static/Fonts/BebasNeue-Regular.ttf'); }
+    src: url('/backend/static/Fonts/BebasNeue-Regular.ttf'); }
 
 .home_title {
     font-size: 5rem;
