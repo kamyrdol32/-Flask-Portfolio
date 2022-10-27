@@ -23,7 +23,7 @@ Technologie = [
     ["Linux", "fab fa-linux", 3, 2, "Rodzina uniksopodobnych systemów operacyjnych opartych na jądrze Linux. Linux jest jednym z przykładów wolnego i otwartego oprogramowania. Jego kod źródłowy może być dowolnie wykorzystywany, modyfikowany i rozpowszechniany."],
     ["React", "fab fa-react", 3, 2, "Biblioteka języka programowania JavaScript, która wykorzystywana jest do tworzenia interfejsów graficznych aplikacji internetowych. Często wykorzystywana do tworzenia aplikacji typu Single Page Application."],
     ["Docker & Docker-compose", "fab fa-docker", 3, 2, "Otwarte oprogramowanie służące do realizacji wirtualizacji na poziomie systemu operacyjnego (tzw. „konteneryzacji”), działające jako 'platforma dla programistów i administratorów do tworzenia, wdrażania i uruchamiania aplikacji rozproszonych'."],
-    ["Nginx", "fab fa-docker", 2, 3, "Serwer WWW (HTTP) oraz serwer proxy dla HTTP i IMAP/POP3. Zaprojektowany z myślą o wysokiej dostępności i silnie obciążonych serwisach (nacisk na skalowalność i niską zajętość zasobów). Wydawany jest na licencji BSD."],
+    ["Nginx", "fab fa-browser", 2, 3, "Serwer WWW (HTTP) oraz serwer proxy dla HTTP i IMAP/POP3. Zaprojektowany z myślą o wysokiej dostępności i silnie obciążonych serwisach (nacisk na skalowalność i niską zajętość zasobów). Wydawany jest na licencji BSD."],
 ]
 
 Portfolio = [
