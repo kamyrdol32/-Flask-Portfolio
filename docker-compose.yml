@@ -2,28 +2,29 @@ version: "3.8"
 
 services:
 
-        nginx:
-            image: nginx:alpine
-            restart: unless-stopped
-            volumes:
-                -   ./nginx/nginx.conf:/etc/nginx/conf.d/default.conf
-            ports:
-                -   80:80
-            networks:
-                -   default
-                -   portfolio
-            depends_on:
-                -   portfolio-backend
+    portfolio-backend:
+        build:
+            context: backend
+            dockerfile: Dockerfile
+        container_name: portfolio-backend
+        networks:
+            -   nginx_network
+            -   portfolio_network
 
-        portfolio-backend:
-            build:
-                context: backend
-                dockerfile: Dockerfile
-            container_name: portfolio-backend
-            networks:
-                portfolio:
-                    aliases:
-                        -   portfolio-backend
+#        nginx:
+#            image: nginx:alpine
+#            restart: unless-stopped
+#            volumes:
+#                -   ./nginx/nginx.conf:/etc/nginx/conf.d/default.conf
+#            ports:
+#                -   80:80
+#            networks:
+#                -   default
+#                -   portfolio
+#            depends_on:
+#                -   portfolio-backend
 
 networks:
-    portfolio:
+    nginx_network:
+        external: true
+    portfolio_network:
