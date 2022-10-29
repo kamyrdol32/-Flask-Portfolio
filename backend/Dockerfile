@@ -2,7 +2,7 @@
 FROM python:3.8-slim-buster
 
 # Work directory
-WORKDIR /Flask-Portfolio
+WORKDIR /backend
 
 # Environment variables
 ENV FLASK_APP=core.py
