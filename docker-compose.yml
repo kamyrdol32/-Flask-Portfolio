@@ -2,19 +2,6 @@ version: "3.8"
 
 services:
 
-    portfolio-nginx:
-        image: nginx:alpine
-        container_name: portfolio-nginx
-        restart: unless-stopped
-        ports:
-                -   "80:80"
-                -   "443:443"
-        networks:
-            -   nginx_network
-            -   portfolio_network
-        volumes:
-            -   ./nginx/nginx.conf:/etc/nginx/conf.d/default.conf
-
     portfolio-backend:
         build:
             context: backend
