@@ -2,6 +2,19 @@ version: "3.8"
 
 services:
 
+    portfolio-nginx:
+        build:
+            context: ./nginx
+            dockerfile: Dockerfile
+        container_name: portfolio-nginx
+        restart: unless-stopped
+        ports:
+                -   "80:80"
+                -   "443:443"
+        networks:
+            -   nginx_network
+            -   portfolio_network
+
     portfolio-backend:
         build:
             context: backend
