@@ -7,11 +7,10 @@ from forms import MailForm
 ### CONFIG & DECORATOS
 ####################
 
-Type = "Development" # Production or Development
 
 # Pobieranie config'a z pliku config.py
 app = Flask(__name__)
-app.config.from_object("settings." + Type + "Config")
+app.config.from_pyfile('settings.py')
 mail = Mail(app)
 
 Technologie = [
