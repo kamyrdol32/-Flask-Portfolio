@@ -83,7 +83,7 @@
                     <div class="row mt-3">
                         <div class="col-md-6">
                             <ul>
-                                <li>Wiek: 23</li>
+                                <li>Wiek: 24</li>
                                 <li>Data urodzenia: 19.05.1998</li>
                                 <li>Lokalizacja: Kraków</li>
                                 <li>E-Mail: kam.zeglen@gmail.com</li>
@@ -144,13 +144,13 @@
                 {% for Data in Portfolio %}
                     <div class="col-lg-4 mt-4" data-aos="zoom-in">
                         <div class="card portfolio-card">
-                            <img class="card-img-top" src="{{ Data[1] }}" alt="Card image" style="width: 100%">
+                            <img class="card-img-top" src="{{ Data[2] }}" alt="Card image" style="width: 100%">
                             <div class="card-body">
-                                <h4 class="card-title">{{ Data[0] }}</h4>
-                                <p class="card-text">{{  Data[2] }}</p>
+                                <h3 class="card-title">{{ Data[0] }}</h3>
+                                <h6 class="card-title">{{ Data[1] }}</h6>
+                                <p class="card-text card-buttons">{{  Data[3] }}</p>
                                 <div class="text-center">
-                                    <a href="{{ Data[3] }}" class="btn btn-card m-2">Demo</a>
-                                    <a href="{{ Data[4] }}" class="btn btn-card m-2">Download</a>
+                                    <a href="{{ Data[5] }}" class="btn btn-card m-2">GitHub</a>
                                 </div>
                             </div>
                         </div>

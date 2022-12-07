@@ -90,12 +90,24 @@ label {
     border: 1px solid var(--primary);
 }
 
+.card-img-top {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border: 2px solid black;
+}
+
 /* Portfolio */
 .btn-card {
     background-color: var(--primary);
     color: black !important;
     font-weight: bold;
 }
+.portfolio-card {
+    height: 600px;
+    cursor: pointer;
+}
+
 .portfolio-card:hover {
     border: 1px solid var(--primary);
 }

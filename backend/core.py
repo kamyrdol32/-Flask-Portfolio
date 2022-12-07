@@ -26,9 +26,10 @@ Technologie = [
 ]
 
 Portfolio = [
-    ["Aplikacja do zarządzania kadrami", "/static/Images/Projects/1.png", "Jest to aplikacja stworzona w Pythonie (Flask) na potrzeby napisania pracy inżynierskiej.", "http://inzynierka.kamilzeglen.pl", "https://github.com/kamyrdol32"],
-    ["Lorem ipsum", "/static/Images/400x400.png", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nulla arcu, maximus sed erat a, lacinia aliquet justo. Ut in fringilla elit. Nunc vestibulum, quam at aliquam elementum, metus elit dignissim nibh, vel congue leo urna in urna", "http://kamilzeglen.pl", "https://github.com/kamyrdol32"],
-    ["Lorem ipsum", "/static/Images/400x400.png", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nulla arcu, maximus sed erat a, lacinia aliquet justo. Ut in fringilla elit. Nunc vestibulum, quam at aliquam elementum, metus elit dignissim nibh, vel congue leo urna in urna", "http://kamilzeglen.pl", "https://github.com/kamyrdol32"],
+    ["Hyped", "2022", "/static/Images/Projects/Hyped.pl/Glowna.png", "Jest to aplikacja stworzona na potrzeby pracy magisterskiej. W projekcie dominującą technologią BackEnd'ową jest Python (Flask) oraz React'a'", "http://kamilzeglen.pl", "https://github.com/kamyrdol32/Hyped.pl"],
+    ["Instagram", "2022", "/static/Images/Projects/Instagram2.0/Zdjecia.png", "Aplikacja stworzona wraz z 'franciszek-szeptycki' w celu rozwijania swojego portfolio. Wykorzystane technologie: Flask / React", "http://kamilzeglen.pl", "https://github.com/franciszek-szeptycki/Instagram-2.0"],
+    ["Kadr", "2020", "/static/Images/Projects/Kadr.pl/Glowna.png", "Jest to aplikacja stworzona na potrzeby pracy inżynierskiej. W projekcie dominującą technologia jest Python (Flask).", "http://inzynierka.kamilzeglen.pl", "https://github.com/kamyrdol32/Kadr.pl"],
+    ["AmbiWave", "2020", "/static/Images/Projects/AmbiWave.pl/Glowna.png", "Aplikacja napisana w frameworku Flask (Python) w procesie nauki tej technologii. W minimalnym stopniu wykorzystano również JavaScript", "http://kamilzeglen.pl", "https://github.com/kamyrdol32/AmbiWave.pl"],
 ]
 
 @app.route('/', methods=['GET', 'POST'])
