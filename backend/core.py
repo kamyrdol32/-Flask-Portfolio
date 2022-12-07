@@ -28,6 +28,7 @@ Technologie = [
 Portfolio = [
     ["Hyped", "2022", "/static/Images/Projects/Hyped.pl/Glowna.png", "Jest to aplikacja stworzona na potrzeby pracy magisterskiej. W projekcie dominującą technologią BackEnd'ową jest Python (Flask) oraz React'a'", "http://kamilzeglen.pl", "https://github.com/kamyrdol32/Hyped.pl"],
     ["Instagram", "2022", "/static/Images/Projects/Instagram2.0/Zdjecia.png", "Aplikacja stworzona wraz z 'franciszek-szeptycki' w celu rozwijania swojego portfolio. Wykorzystane technologie: Flask / React", "http://kamilzeglen.pl", "https://github.com/franciszek-szeptycki/Instagram-2.0"],
+    ["Portfolio", "2021", "/static/Images/Projects/Portfolio/Glowna.png", "Aplikacja stworzona na potrzeby zaprezentowania siebie oraz swoich dotychczasowych osiągnięć w programowaniu.", "http://kamilzeglen.pl", "https://github.com/kamyrdol32/Portfolio"],
     ["Kadr", "2020", "/static/Images/Projects/Kadr.pl/Glowna.png", "Jest to aplikacja stworzona na potrzeby pracy inżynierskiej. W projekcie dominującą technologia jest Python (Flask).", "http://inzynierka.kamilzeglen.pl", "https://github.com/kamyrdol32/Kadr.pl"],
     ["AmbiWave", "2020", "/static/Images/Projects/AmbiWave.pl/Glowna.png", "Aplikacja napisana w frameworku Flask (Python) w procesie nauki tej technologii. W minimalnym stopniu wykorzystano również JavaScript", "http://kamilzeglen.pl", "https://github.com/kamyrdol32/AmbiWave.pl"],
 ]
