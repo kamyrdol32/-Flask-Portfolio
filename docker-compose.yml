@@ -2,19 +2,19 @@ version: "3.8"
 
 services:
 
-    portfolio-backend:
+    portfolio_old-backend:
         build:
             context: backend
             dockerfile: Dockerfile
-        container_name: portfolio-backend
+        container_name: portfolio_old-backend
         restart: unless-stopped
         ports:
-            -   "5000:5000"
+            -   "5005:5005"
         networks:
             -   nginx_network
-            -   portfolio_network
+            -   portfolio_old_network
 
 networks:
     nginx_network:
         external: true
-    portfolio_network:
+    portfolio_old_network:

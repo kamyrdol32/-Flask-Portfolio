@@ -1,5 +1,5 @@
 # Image
-FROM python:3.8-slim-buster
+FROM python:3.11-alpine
 
 # Work directory
 WORKDIR /backend
@@ -9,16 +9,24 @@ ENV FLASK_APP=core.py
 ENV FLASK_RUN_HOST=0.0.0.0
 ENV FLASK_ENV=development
 ENV FLASK_DEBUG=1
-ENV FLASK_RUN_PORT=5000
+ENV FLASK_RUN_PORT=5005
+ENV POETRY_VERSION=1.4.0
 
-# Requirements & Installations
-RUN pip install --upgrade pip
-COPY requirements.txt ./
-RUN pip install -r requirements.txt
+# System deps:
+RUN pip install --no-cache-dir "poetry==$POETRY_VERSION"
 
-# Copy source code
+# Copy only requirements to cache them in docker layer
+COPY poetry.lock pyproject.toml ./
+
+# Project initialization:
+RUN poetry config virtualenvs.create false \
+    && poetry install --no-dev
+
+# Copy project
 COPY . .
 
-# Run
-#CMD ["flask", "run"]
-CMD ["gunicorn", "--bind", "0.0.0.0:5000", "core:app"]
+# Expose port
+EXPOSE 5005
+
+# Run app
+CMD ["gunicorn", "--bind", "0.0.0.0:5005", "wsgi:app"]
