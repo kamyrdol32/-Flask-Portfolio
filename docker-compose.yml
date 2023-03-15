@@ -11,10 +11,8 @@ services:
         ports:
             -   "5005:5005"
         networks:
-            -   nginx_network
             -   portfolio_old_default
 
 networks:
-    nginx_network:
-        external: true
     portfolio_old_default:
+        external: true
