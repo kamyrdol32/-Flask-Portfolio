@@ -42,6 +42,11 @@ def index():
     return render_template("index.html", Technologie=Technologie, Portfolio=Portfolio, form=form)
 
 
+@app.route('/health_check')
+def health_check():
+    return "Online"
+
+
 ####################
 ### Mail
 ####################
