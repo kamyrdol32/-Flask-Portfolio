@@ -10,7 +10,7 @@ from forms import MailForm
 
 # Pobieranie config'a z pliku config.py
 app = Flask(__name__)
-app.config.from_pyfile('settings.py')
+app.config.from_pyfile("config.py")
 mail = Mail(app)
 
 Technologie = [

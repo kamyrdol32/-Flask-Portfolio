@@ -8,9 +8,6 @@ This website is a personal portfolio showcasing the professional work and skills
 | :---: | :---: | :---: |
 | **Kamil Żegleń** ([kamyrdol32](https://github.com/kamyrdol32))  | ![100%](https://progress-bar.dev/100)  | ![100%](https://progress-bar.dev/100)  |
 
-## Installation
-`Comming soon`
-
 ## Technologies used:
   - **Python**:
       - Flask,
@@ -22,8 +19,29 @@ This website is a personal portfolio showcasing the professional work and skills
     - Bootstrap,
   - **JavaScript**:
   
+## Installation
+### Requirements
+  - **Docker & Docker Compose**
+  
+### Environment Variables
+To run this project, you will need to add the following environment file on backend directory:
+
+_**.env**_
+```bash
+SECRET_KEY=""
+MAIL_USERNAME=""
+MAIL_PASSWORD=""
+```
+
+### Instruction
+To deploy this project run project
+
+```bash
+docker-compose up
+```
+
 ## Demo:
-`Comming soon`
+<https://hyped.kamilzeglen.pl/>
   
 ## Pictures:
 ### Main page

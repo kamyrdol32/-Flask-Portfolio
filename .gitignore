@@ -1,2 +1,1 @@
-/venv/
-backend/settings.py
+/backend/.env
