@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, jsonify
 from flask_mail import Message, Mail
 from flask_cors import CORS, cross_origin
 from forms import MailForm
@@ -144,7 +144,7 @@ def index():
 @app.route("/health_check")
 @cross_origin()
 def health_check():
-    return "Online"
+    return jsonify("OK", 200)
 
 
 ####################
