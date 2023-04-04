@@ -16,5 +16,5 @@ services:
             - portfolio_old_default
 
 networks:
-    bridge:
-        driver: portfolio_old_default
+    portfolio_old_default:
+        driver: bridge
