@@ -14,6 +14,5 @@ services:
             -   "5005:5005"
 
 networks:
-    default:
-        external:
-            name: portfolio_old-network
+    portfolio_old_default:
+        external: true
