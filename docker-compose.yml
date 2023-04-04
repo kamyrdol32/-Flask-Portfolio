@@ -15,4 +15,4 @@ services:
 
 networks:
     portfolio_old_default:
-        external: true
+        driver: bridge
