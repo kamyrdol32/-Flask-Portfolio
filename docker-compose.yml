@@ -12,3 +12,9 @@ services:
         restart: unless-stopped
         ports:
             -   "5005:5005"
+        networks:
+            - bridge
+
+networks:
+    bridge:
+        driver: bridge
