@@ -13,8 +13,8 @@ services:
         ports:
             -   "5005:5005"
         networks:
-            - portfolio_old-network
+            - portfolio_old_default
 
 networks:
     bridge:
-        driver: portfolio_old-network
+        driver: portfolio_old_default
