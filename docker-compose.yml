@@ -12,3 +12,9 @@ services:
         restart: unless-stopped
         ports:
             -   "5005:5005"
+        networks:
+            - portfolio_old_default
+
+networks:
+    portfolio_old_default:
+        driver: external
