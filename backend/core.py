@@ -143,7 +143,7 @@ def index():
 
 @app.route("/health_check")
 def health_check():
-    return jsonify("OK", 200)
+    return jsonify("OK"), 200
 
 
 ####################
