@@ -12,3 +12,8 @@ services:
         restart: unless-stopped
         ports:
             -   "5005:5005"
+
+networks:
+    default:
+        external:
+            name: portfolio_old-network
