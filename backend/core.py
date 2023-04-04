@@ -142,7 +142,6 @@ def index():
 
 
 @app.route("/health_check")
-@cross_origin()
 def health_check():
     return jsonify("OK", 200)
 
